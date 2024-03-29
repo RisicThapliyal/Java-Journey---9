@@ -1,0 +1,22 @@
+//    Decimal to Binary
+
+    public static void decToBin(int decNum){
+        int pow = 0;
+        int binary = 0;
+
+        while(decNum > 0){
+            int rem = decNum % 2;
+            binary = binary + (rem * (int)Math.pow(10, pow));
+            pow++;
+
+            decNum = decNum / 2;
+        }
+        System.out.println(binary);
+    }
+
+    public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int decNum = sc.nextInt();
+
+        decToBin(decNum);
+    }
